@@ -8,7 +8,7 @@ metadata:
 spec:
   rules:
   
-    - host: ticketing.dev
+    - host: post.com
       http:
         paths:
         - pathType: Prefix
