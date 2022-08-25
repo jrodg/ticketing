@@ -17,16 +17,28 @@ import { Password } from "../services/password";
     password: string
  }
 
- const userSchema = new mongoose.Schema({
-    email: {
+ const userSchema = new mongoose.Schema(
+    {
+      email: {
         type: String,
-        required: true
+        required: true,
+      },
+      password: {
+        type: String,
+        required: true,
+      },
     },
-    password: {
-        type: String,
-        required: true
+    {
+      toJSON: {
+        transform(doc, ret) {
+          ret.id = ret._id;
+          delete ret._id;
+          delete ret.password;
+          delete ret.__v;
+        },
+      },
     }
- })
+  );
 
  userSchema.pre('save', async function(done) {
     if (this.isModified('password')) {
