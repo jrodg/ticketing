@@ -1,23 +1,5 @@
-import mongoose from "mongoose";
-import cookieSession = require("cookie-session") ;
-
-const app = express();
-app.set('trust proxy', true)
-app.use(json());
-app.use(cookieSession({
-    signed: false,
-    secure: true
-}))
-app.use(currentUserRouter)
-app.use(signinRouter)
-app.use(signoutRouter)
-app.use(signupRouter)
-app.get('*',async (req,res) => {
-  throw new Error("");
-  
-})
-
-app.use(errorHandler)
+import  mongoose  from "mongoose";
+import { app } from "./app";
 
 const start = async () => {
   if(!process.env.JWT_KEY){
