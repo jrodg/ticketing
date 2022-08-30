@@ -1,5 +1,6 @@
 {
     "yaml.schemas": {
-        "kubernetes://schema/apps/v1@deployment+v1@service": "file:///Users/juniorrodriguez/Downloads/ticketing/infra/k8s/auth-depl.yaml"
+        "kubernetes://schema/apps/v1@deployment+v1@service": "file:///Users/juniorrodriguez/Downloads/ticketing/infra/k8s/auth-depl.yaml",
+        "kubernetes://schema/apps/v1%40deployment": "file:///Users/juniorrodriguez/Documents/udemy_projects/ticketing/infra/k8s/client-depl.yaml"
     }
 }
