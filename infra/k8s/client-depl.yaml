@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: jrod201d/ticketing-client
+          image: jrod201d/client
 ---
 apiVersion: v1
 kind: Service
