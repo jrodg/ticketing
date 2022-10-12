@@ -5,7 +5,7 @@ export class DataBaseValitationError extends CustomError{
     statuscode= 500
     reason = "Database error"
  constructor(public errors:ValidationError[]) {
-    super()
+    super("DB error")
     Object.setPrototypeOf(this, DataBaseValitationError.prototype)
  }
  serializeErrors(){
